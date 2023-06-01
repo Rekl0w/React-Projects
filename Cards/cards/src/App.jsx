@@ -12,7 +12,6 @@ function App() {
 
   return (
     <>
-      {/* <img src={Angular} alt="" /> */}
       <section className="hero is-link">
         <div className="hero-body">
           <p className="title">Kurslar</p>
