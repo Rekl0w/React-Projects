@@ -7,12 +7,19 @@ function Courses({ courses }) {
   const { content, title, price } = courses[index];
 
   const randomCourse = () => {
-    let randomIndex = Math.floor(Math.random() * courses.length);
+    let randomIndex = Math.floor(Math.random() * courses.length );
 
     if (randomIndex === index) {
       randomIndex = index + 1;
     }
+    if (randomIndex > courses.length - 1) {
+      randomIndex = 0;
+      }
 
+      if (randomIndex < 0) { 
+        randomIndex = courses.length - 1;
+      }
+    console.log(randomIndex);
     setIndex(randomIndex);
   };
 
